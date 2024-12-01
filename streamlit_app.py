@@ -4,8 +4,12 @@ from datetime import datetime
 # Panca Wara
 arr_pwara = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Umanis']
 
-# Sampta Wara
+# Sapta Wara
 arr_stwara = ['Soma', 'Anggara', 'Buda', 'Wrespati', 'Sukra', 'Saniscara', 'Redite']
+
+# Wuku
+arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tambir', 'Medangkungan', 'Matal', 'Uye', 'Menail', 'Prangbakat', 'Bala', 'Ugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung', 'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Taulu', 'Gumbreg', 'Wariga', 'Warigadean', 'Julungwangi', 'Sungsang', 'Dungulan', 'Kuningan',]
+
 
 # Judul aplikasi
 st.title("Hitung Panca Wara Berdasarkan Tanggal")
@@ -29,10 +33,11 @@ if tanggal_input:
         delta = (input_date - start_date).days
         pwara = delta % 5
         stwara = delta % 7
+        wuku = math.floor(((delta + 1) % 210) / 7)
 
         # Tampilkan hasil
         st.success(f"Jumlah hari dari 01/01/1900 sampai {tanggal_input.strftime('%d/%m/%Y')}: {delta} hari")
-        st.info(f"Wewaran: **{arr_pwara[pwara]} {arr_stwara[stwara]}**")
+        st.info(f"Wewaran: **{arr_stwara[stwara]} {arr_pwara[pwara]} {arr_wuku[wuku]} **")
     except Exception as e:
         # Jika terjadi kesalahan
         st.error(f"Terjadi kesalahan: {e}")
