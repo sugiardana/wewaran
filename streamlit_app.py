@@ -4,9 +4,11 @@ import math
 
 # Panca Wara
 arr_pwara = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Umanis']
+arr_upwara=[9,7,4,8,5,9]
 
 # Sapta Wara
 arr_stwara = ['Soma', 'Anggara', 'Buda', 'Wrespati', 'Sukra', 'Saniscara', 'Redite']
+arr_ustwara=[4,3,7,8,6,9,5]
 
 # Wuku
 arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tambir', 'Medangkungan', 'Matal', 'Uye', 'Menail', 'Prangbakat', 'Bala', 'Ugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung', 'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Taulu', 'Gumbreg', 'Wariga', 'Warigadean', 'Julungwangi', 'Sungsang', 'Dungulan', 'Kuningan',]
@@ -35,10 +37,11 @@ if tanggal_input:
         pwara = delta % 5
         stwara = delta % 7
         wuku = math.floor(((delta + 1) % 210) / 7)
+        u_hari = arr_ustwara[stwara] + arr_upwara[pwara]
 
         # Tampilkan hasil
-        st.success(f"Jumlah hari dari 01/01/1900 sampai {tanggal_input.strftime('%d/%m/%Y')}: {delta} hari")
-        st.info(f"Wewaran: **{arr_stwara[stwara]} {arr_pwara[pwara]} {arr_wuku[wuku]} **")
+        st.info(f"Wewaran: **{arr_stwara[stwara]} {arr_pwara[pwara]} Wuku {arr_wuku[wuku]} **")
+        st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari} **")
     except Exception as e:
         # Jika terjadi kesalahan
         st.error(f"Terjadi kesalahan: {e}")
