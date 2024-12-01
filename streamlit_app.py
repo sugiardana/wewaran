@@ -22,15 +22,14 @@ if tanggal_input:
 
         # Hitung selisih hari
         delta = (input_date - start_date).days
-		pwara = delta % 5
-		stwara = delta % 7
+	pwara = delta % 5
+	stwara = delta % 7
 
         # Tampilkan hasil
         
-		st.write("{delta} hari")
-		st.write("{pwara}")
-		st.write("{arr_pwara[pwara]}")
-		#st.success(f"{delta} hari")
+	st.write(f"{delta} hari")
+	st.write(f"index: {pwara}")
+        st.write(f"Panca Wara: {arr_pwara[pwara]}")
 		
     except ValueError:
         # Jika format input salah
