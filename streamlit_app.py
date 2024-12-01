@@ -1,17 +1,19 @@
 import streamlit as st
 from datetime import datetime
 
+# Panca Wara
+arr_pwara = ['Umanis', 'Pahing', 'Pon', 'Wage', 'Kliwon']
+
 # Judul aplikasi
-st.title("Mencari Wewaran")
+st.title("Hitung Panca Wara Berdasarkan Tanggal")
 
 # Deskripsi aplikasi
-st.write("Masukkan tanggal ")
+st.write("Aplikasi ini menghitung Wewaran dari suatu tanggal.")
 
 # Input tanggal dari pengguna
 tanggal_input = st.text_input("Masukkan tanggal (format: DD/MM/YYYY):")
 
-arr_pwara = ['Umanis','Pahing','Pon','Wage','Kliwon']
-
+# Jika input tidak kosong, proses data
 if tanggal_input:
     try:
         # Konversi input ke objek datetime
@@ -22,15 +24,11 @@ if tanggal_input:
 
         # Hitung selisih hari
         delta = (input_date - start_date).days
-	pwara = delta % 5
-	stwara = delta % 7
+        pwara = delta % 5
 
         # Tampilkan hasil
-        
-	st.write(f"{delta} hari")
-	st.write(f"index: {pwara}")
-        st.write(f"Panca Wara: {arr_pwara[pwara]}")
-		
+        st.success(f"Jumlah hari dari 01/01/1900 sampai {tanggal_input}: {delta} hari")
+        st.info(f"Panca Wara: **{arr_pwara[pwara]}**")
     except ValueError:
-        # Jika format input salah
+        # Jika format tanggal salah
         st.error("Format tanggal salah! Gunakan format DD/MM/YYYY.")
