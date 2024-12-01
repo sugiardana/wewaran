@@ -1,6 +1,37 @@
 import streamlit as st
+from datetime import datetime
 
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+# Judul aplikasi
+st.title("Mencari Wewaran")
+
+# Deskripsi aplikasi
+st.write("Masukkan tanggal ")
+
+# Input tanggal dari pengguna
+tanggal_input = st.text_input("Masukkan tanggal (format: DD/MM/YYYY):")
+
+arr_pwara = ['Umanis','Pahing','Pon','Wage','Kliwon']
+
+if tanggal_input:
+    try:
+        # Konversi input ke objek datetime
+        input_date = datetime.strptime(tanggal_input, "%d/%m/%Y")
+
+        # Tanggal awal
+        start_date = datetime(1900, 1, 1)
+
+        # Hitung selisih hari
+        delta = (input_date - start_date).days
+		pwara = delta % 5
+		stwara = delta % 7
+
+        # Tampilkan hasil
+        
+		st.write("{delta} hari")
+		st.write("{pwara}")
+		st.write("{arr_pwara[pwara]}")
+		#st.success(f"{delta} hari")
+		
+    except ValueError:
+        # Jika format input salah
+        st.error("Format tanggal salah! Gunakan format DD/MM/YYYY.")
