@@ -15,7 +15,7 @@ arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tam
 
 
 # Judul aplikasi
-st.title("Hitung Panca Wara Berdasarkan Tanggal")
+st.title("Hitung Wewaran Berdasarkan Tanggal")
 
 # Deskripsi aplikasi
 st.write("Aplikasi ini menghitung Wewaran dari suatu tanggal.")
