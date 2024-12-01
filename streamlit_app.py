@@ -21,7 +21,7 @@ st.title("Hitung Wewaran Berdasarkan Tanggal")
 st.write("Aplikasi ini menghitung Wewaran dari suatu tanggal.")
 
 # Input tanggal menggunakan kalender
-tanggal_input = st.date_input("Pilih tanggal:")
+tanggal_input = st.date_input("Pilih tanggal:", min_value=datetime(1900, 1, 1))
 
 # Jika tanggal dipilih
 if tanggal_input:
