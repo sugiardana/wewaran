@@ -21,7 +21,7 @@ arr_awara = ['Indra', 'Guru', 'Yama', 'Ludra', 'Brahma', 'Kala', 'Uma', 'Sri']
 # Sanga Wara
 arr_sgwara = ['Tulus', 'Dadi', 'Dangu', 'Jangur', 'Gigis', 'Nohan', 'Ogan', 'Erangan', 'Urungan']
 # Dasa Wara
-arr_dswara = ['Suka', 'Duka', 'Sri', 'Manuh', 'Manusa', 'Eraja', 'Dewa','Raksasa','Pandita', 'Pati']
+arr_dswara = ['Duka', 'Sri', 'Manuh', 'Manusa', 'Eraja', 'Dewa','Raksasa','Pandita', 'Pati', 'Suka']
 # Wuku
 arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tambir', 'Medangkungan', 'Matal', 'Uye', 'Menail', 'Prangbakat', 'Bala', 'Ugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung', 'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Taulu', 'Gumbreg', 'Wariga', 'Warigadean', 'Julungwangi', 'Sungsang', 'Dungulan', 'Kuningan',]
 
