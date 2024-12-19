@@ -80,7 +80,7 @@ if tanggal_input:
         st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari}**")
 
         df = pd.read_csv("https://idoxa6a.sufydely.com/pal_serisedana.csv")
-        df = df[df.urip=={u_hari}]
+        df = df[df.urip==u_hari]
         
         if df.empty:
             st.warning(f"Tidak ada data untuk urip = '{u_hari}'.")
