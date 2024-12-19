@@ -50,7 +50,7 @@ if tanggal_input:
         # Tampilkan hasil
         st.info(f"Eka Wara: **{nm_e_wara}**")
         st.info(f"Panca Wara: **{arr_pwara[pwara]} **")
-        st.info(f"Sapta Wara: **{{arr_stwara[stwara]}} **")
+        st.info(f"Sapta Wara: **{arr_stwara[stwara]} **")
         st.info(f"Wuku: ** {arr_wuku[wuku]} **")
         st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari} **")
     except Exception as e:
