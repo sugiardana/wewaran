@@ -5,23 +5,23 @@ import math
 # Dwi Wara
 arr_dwara = ['Menga', 'Pepet']
 # Tri Wara
-arr_twara = ['Pasah', 'Beteng', 'Kajeng']
+arr_twara = ['Beteng', 'Kajeng', 'Pasah']
 # Catur Wara
-arr_cwara = ['Sri', 'Laba', 'Jaya', 'Menala']
+arr_cwara = ['Laba', 'Jaya', 'Menala', 'Sri']
 # Panca Wara
 arr_pwara = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Umanis']
 arr_upwara=[9,7,4,8,5,9]
 # Sad Wara
-arr_sdwara = ['Tungleh', 'Aryang', 'Urukung', 'Paniron', 'Was','Maulu']
+arr_sdwara = ['Maulu', 'Tungleh', 'Aryang', 'Urukung', 'Paniron', 'Was']
 # Sapta Wara
 arr_stwara = ['Soma', 'Anggara', 'Buda', 'Wrespati', 'Sukra', 'Saniscara', 'Redite']
 arr_ustwara=[4,3,7,8,6,9,5]
 # Asta Wara
-arr_awara = ['Sri', 'Indra', 'Guru', 'Yama', 'Ludra', 'Brahma', 'Kala', 'Uma']
+arr_awara = ['Indra', 'Guru', 'Yama', 'Ludra', 'Brahma', 'Kala', 'Uma', 'Sri']
 # Sanga Wara
-arr_sgwara = ['Dangu', 'Jangur', 'Gigis', 'Nohan', 'Ogan', 'Erangan', 'Urungan', 'Tulus', 'Dadi']
+arr_sgwara = ['Tulus', 'Dadi', 'Dangu', 'Jangur', 'Gigis', 'Nohan', 'Ogan', 'Erangan', 'Urungan']
 # Dasa Wara
-arr_dswara = ['Pandita', 'Pati', 'Suka', 'Duka', 'Sri', 'Manuh', 'Manusa', 'Eraja', 'Dewa','Raksasa']
+arr_dswara = ['Suka', 'Duka', 'Sri', 'Manuh', 'Manusa', 'Eraja', 'Dewa','Raksasa','Pandita', 'Pati']
 # Wuku
 arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tambir', 'Medangkungan', 'Matal', 'Uye', 'Menail', 'Prangbakat', 'Bala', 'Ugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung', 'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Taulu', 'Gumbreg', 'Wariga', 'Warigadean', 'Julungwangi', 'Sungsang', 'Dungulan', 'Kuningan',]
 
