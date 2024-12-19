@@ -89,6 +89,8 @@ if tanggal_input:
             fig, ax = plt.subplots()
             sns.lineplot(data=df, x="min_usia", y="nilai", ax=ax)
             ax.set_title(f"Siklus Kehidupan untuk urip = '{u_hari}'")
+            ax.set_xlabel("Usia") 
+            ax.set_ylabel("Nilai")
     
             # Menampilkan plot di Streamlit
             st.pyplot(fig)
