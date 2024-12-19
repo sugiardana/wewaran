@@ -42,7 +42,7 @@ if tanggal_input:
         wuku = math.floor(((delta + 1) % 210) / 7)
         u_hari = arr_ustwara[stwara] + arr_upwara[pwara]
         e_wara = u_hari % 2
-        if e_wara=1:
+        if e_wara==1:
             nm_e_wara="Luwang"
         else:
             nm_e_wara="-"
