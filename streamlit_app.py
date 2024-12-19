@@ -81,7 +81,17 @@ if tanggal_input:
 
         df = pd.read_csv("https://idoxa6a.sufydely.com/pal_serisedana.csv")
         df = df[df.urip=={u_hari}]
-        sns.lineplot(data=df, x="min_usia", y="nilai")
+        
+        if df.empty:
+            st.warning(f"Tidak ada data untuk urip = '{u_hari}'.")
+        else:
+            # Plot menggunakan Seaborn
+            fig, ax = plt.subplots()
+            sns.lineplot(data=df, x="min_usia", y="nilai", ax=ax)
+            ax.set_title(f"Siklus Kehidupan untuk urip = '{u_hari}'")
+    
+            # Menampilkan plot di Streamlit
+            st.pyplot(fig)
         
     except Exception as e:
         # Jika terjadi kesalahan
