@@ -3,6 +3,9 @@ from datetime import datetime
 import math
 
 # Panca Wara
+arr_dwara = ['Menga', 'Pepet']
+arr_twara = ['Pasah', 'Beteng', 'Kajeng']
+arr_cwara = ['Sri', 'Laba', 'Jaya', 'Mandala']
 arr_pwara = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Umanis']
 arr_upwara=[9,7,4,8,5,9]
 
@@ -38,9 +41,17 @@ if tanggal_input:
         stwara = delta % 7
         wuku = math.floor(((delta + 1) % 210) / 7)
         u_hari = arr_ustwara[stwara] + arr_upwara[pwara]
+        e_wara = u_hari % 2
+        if e_wara=1:
+            nm_e_wara="Luwang"
+        else:
+            nm_e_wara="-"
 
         # Tampilkan hasil
-        st.info(f"Wewaran: **{arr_stwara[stwara]} {arr_pwara[pwara]} Wuku {arr_wuku[wuku]} **")
+        st.info(f"Eka Wara: **{nm_e_wara}**")
+        st.info(f"Panca Wara: **{arr_pwara[pwara]} **")
+        st.info(f"Sapta Wara: **{{arr_stwara[stwara]}} **")
+        st.info(f"Wuku: ** {arr_wuku[wuku]} **")
         st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari} **")
     except Exception as e:
         # Jika terjadi kesalahan
