@@ -1,6 +1,9 @@
 import streamlit as st
 from datetime import datetime
 import math
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # Dwi Wara
 arr_dwara = ['Menga', 'Pepet']
@@ -75,6 +78,11 @@ if tanggal_input:
         st.info(f"Dasa Wara: **{arr_dswara[dswara]}**")
         st.info(f"Wuku: **{arr_wuku[wuku]}**")
         st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari}**")
+
+        df = pd.read_csv("https://idoxa6a.sufydely.com/pal_serisedana.csv")
+        df = df[df.urip=={u_hari}]
+        sns.lineplot(data=df, x="min_usia", y="nilai")
+        
     except Exception as e:
         # Jika terjadi kesalahan
         st.error(f"Terjadi kesalahan: {e}")
