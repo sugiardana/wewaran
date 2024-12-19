@@ -27,7 +27,8 @@ arr_sgwara = ['Tulus', 'Dadi', 'Dangu', 'Jangur', 'Gigis', 'Nohan', 'Ogan', 'Era
 arr_dswara = ['Duka', 'Sri', 'Manuh', 'Manusa', 'Eraja', 'Dewa','Raksasa','Pandita', 'Pati', 'Suka']
 # Wuku
 arr_wuku = ['Langkir', 'Medangsia', 'Pujut', 'Pahang', 'Krulut', 'Merakih', 'Tambir', 'Medangkungan', 'Matal', 'Uye', 'Menail', 'Prangbakat', 'Bala', 'Ugu', 'Wayang', 'Kelawu', 'Dukut', 'Watugunung', 'Sinta', 'Landep', 'Ukir', 'Kulantir', 'Taulu', 'Gumbreg', 'Wariga', 'Warigadean', 'Julungwangi', 'Sungsang', 'Dungulan', 'Kuningan',]
-
+# Ingkel
+arr_ingkel = ['Buku', 'Wong', 'Sato', 'Mina', 'Manuk', 'Taru']
 
 # Judul aplikasi
 st.title("Hitung Wewaran Berdasarkan Tanggal")
@@ -58,6 +59,11 @@ if tanggal_input:
         sgwara = delta % 9
         dswara = delta % 10
         wuku = math.floor(((delta + 1) % 210) / 7)
+        if wuku>17:
+            bil_wuku = (wuku-17)
+        else:
+            bil_wuku = 30 + (wuku-17)
+        ingkel = bil_wuku % 6
         u_hari = arr_ustwara[stwara] + arr_upwara[pwara]
         e_wara = u_hari % 2
         if e_wara==1:
@@ -77,6 +83,7 @@ if tanggal_input:
         st.info(f"Sanga Wara: **{arr_sgwara[sgwara]}**")
         st.info(f"Dasa Wara: **{arr_dswara[dswara]}**")
         st.info(f"Wuku: **{arr_wuku[wuku]}**")
+        st.info(f"Ingkel: **{arr_ingkel[ingkel]}**")
         st.info(f"Urip Hari: **{arr_ustwara[stwara]} + {arr_upwara[pwara]} = {u_hari}**")
 
         df = pd.read_csv("https://idoxa6a.sufydely.com/pal_serisedana.csv")
